@@ -1,0 +1,290 @@
+<!--
+    見にくいソース
+-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="canpus">
+            <div class="layer1">
+                <div class="layer2">
+                    <div class="layer3">
+                        <div class="layer4">
+                            <div class="layer5">
+                                <div class="topbar1">
+                                    <text style="color:white;font-size:3.3vmin;position:absolute;margin-top:-0.5%;left:0;right:0;font-family: 'DotGothic16', sans-serif;">Clock</text>
+                                    <div class="topbar-left-button">
+                                        <div class="topbar-left-button-layer1"></div>
+                                    </div>
+                                    <div class="border2"></div>
+                                    <div class="topbar-button-right">
+                                        <div class="topbar-right-button1">
+                                            <div class="topbar-right-button1-layer1">
+                                                <div class="down-triangle"></div>
+                                            </div>
+                                        </div>
+                                        <div class="border3"></div>
+                                        <div class="topbar-right-button2">
+                                            <div class="topbar-right-button2-layer1">
+                                                <div class="up-triangle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border1"></div>
+                                <div class="topbar2">
+                                    <text>Settings</text>
+                                </div>
+                                <div id="clock_time" class="clock_time"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid"></div>
+            </div>
+        </div>
+    </body>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+        .canpus{
+            background-color:#505050;
+            height: 98.5vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .border1{
+            background-color: rgb(0, 0, 0);
+            position:static;
+            width: 100%;
+            height: 0.4vmin;
+        }
+
+        .border2{
+            background-color: rgb(0, 0, 0);
+            position:absolute;
+            width: 0.4vmin;
+            height: 100%;
+            margin-left: 7.4%;
+            z-index: 1;
+        }
+
+        .border3{
+            background-color: rgb(0, 0, 0);
+            position:absolute;
+            width: 0.4vmin;
+            height: 100%;
+            margin-left: 47%;
+            z-index: 1;
+        }
+
+        .grid{
+            height: 66vmin;
+            width: 65vmin;
+            position: relative;
+            margin: 6.6vmin auto;
+            border-top: solid 0.4vmin #232323;
+            border-bottom: solid 0.4vmin #232323;
+            z-index: 0;
+        }
+
+        .grid:before, .grid:after{
+            content: '';
+            position: absolute;
+            top: -7.2vmin;
+            width: 0.4vmin;
+            height: -webkit-calc(100% + 14.1vmin);
+            height: calc(100% + 14.1vmin);
+            background-color: #232323;
+        }
+        .grid:before {left: 6.5vmin;}
+        .grid:after {right: 6.4vmin;}
+
+        .layer1{
+            background: rgb(236,236,236);
+            background: linear-gradient(129.1deg, rgba(236,236,236,1) 0%, rgba(231,231,231,1) 50%, rgba(95,95,95,1) 50%, rgba(95,95,95,1) 100%);
+            height: 80vmin;
+            width: 65vmin;
+            position: absolute;
+            top: 50%;
+            margin-top: -40vmin;
+        }
+
+        .layer2{
+            background-color:#a3a3a3;
+            height: 79vmin;
+            width: 64.2vmin;
+            position: absolute;
+            margin: 0.5vmin 0.4vmin;
+        }
+
+        .layer3{
+            background: rgb(255, 255, 255);
+            background: linear-gradient(308.9deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgba(105,105,105,1) 50%, rgb(105, 105, 105) 100%);
+            height: 77.8vmin;
+            width: 62.75vmin;
+            position: absolute;
+            margin:0.625vmin 0.75vmin;
+        }
+
+        .layer4{
+            background-color:rgb(0, 0, 0);
+            height: 76.8vmin;
+            width: 61.8vmin;
+            position: absolute;
+            margin:0.5vmin 0.5vmin;
+            z-index: 1;
+        }
+        .layer5{
+            background-color:rgb(255, 255, 255);
+            height: 76vmin;
+            width: 61vmin;
+            position: absolute;
+            margin:0.425vmin 0.35vmin;
+        }
+
+        .topbar1{
+            background-color: rgb(0, 0, 206);
+            height: 6%;
+            position: relative;
+            display: flex;
+        }
+
+        .topbar2{
+            background-color: #a3a3a3;
+            height:6%;
+            position: relative;
+            text-align: left;
+        }
+
+        .topbar2 text{
+            position: absolute;
+            font-size: 2.75vmin;
+            font-family: 'DotGothic16', sans-serif;
+            margin-top: 0.15vmin;
+            margin-left: 0.8vmin;
+        }
+
+        .topbar-left-button{
+            background-color: #a3a3a3;
+            height: 100%;
+            width: 7.6%;
+            position: relative;
+        }
+
+        .topbar-left-button-layer1{
+            background-color: #ffffff;
+            height: 8%;
+            width: 55%;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top: -12%;
+            margin-left: -30%;
+            box-shadow:0.13vw 0.15vw 0px #707070;
+        }
+
+
+        .topbar-button-right{
+            background-color: aqua;
+            height: 100%;
+            width: 9.16vmin;
+            display: flex;
+            position: relative;
+            left:77.4%;
+        }
+
+        .topbar-right-button1{
+            background: rgb(255, 255, 255);
+            background: linear-gradient(135deg, rgb(234, 234, 234) 0%, rgb(234, 234, 234) 50%, rgba(105,105,105,1) 50%, rgb(105, 105, 105) 100%);
+            height: 100%;
+            width: 49%;
+            position: absolute;
+        }
+
+        .topbar-right-button1-layer1{
+            background-color: #a3a3a3;
+            position: absolute;
+            height: 85%;
+            width: 86%;
+            top:50%;
+            left: 50%;
+            margin-top: -41%;
+            margin-left: -43%;
+        }
+
+        .down-triangle{
+            position: absolute;
+            border-right: 0.6vmin solid transparent;
+            border-top: 1.15vmin solid #000000;
+            border-left: 0.6vmin solid transparent;
+            top: 50%;
+            left: 50%;
+            margin-top: -0.5vmin; 
+            margin-left: -0.5vmin;
+        }
+
+        .topbar-right-button2{
+            background: rgb(255, 255, 255);
+            background: linear-gradient(135deg, rgb(234, 234, 234) 0%, rgb(234, 234, 234) 50%, rgba(105,105,105,1) 50%, rgb(105, 105, 105) 100%);
+            height: 100%;
+            width: 49%;
+            position: absolute;
+            right:0;
+        }
+
+        .topbar-right-button2-layer1{
+            background-color: #a3a3a3;
+            position: absolute;
+            height: 85%;
+            width: 86%;
+            top:50%;
+            left: 50%;
+            margin-top: -41%;
+            margin-left: -43%;
+        }
+
+        .up-triangle{
+            position: absolute;
+            border-right: 0.6vmin solid transparent;
+            border-bottom: 1.15vmin solid #000000;
+            border-left: 0.6vmin solid transparent;
+            top: 50%;
+            left: 50%;
+            margin-top: -0.5vmin; 
+            margin-left: -0.5vmin;
+        }
+
+        .clock_time{
+            font-family: 'DotGothic16', sans-serif;
+            font-size: 8vmin;
+            margin-top: 20vmin;
+        }
+    </style>
+    <script>
+        function clock(){
+            var twoDigit = function(num){
+                var digit
+                if(num<10){
+                    digit = "0" + num;
+                }
+                else {
+                    digit = num;
+                }
+                return digit;
+            }
+
+            var now = new Date();
+            var hour = twoDigit(now.getHours());
+            var minute = twoDigit(now.getMinutes());
+            var second = twoDigit(now.getSeconds());
+
+            document.getElementById("clock_time").textContent = hour + ":" + minute + ":" + second;
+        }
+
+        setInterval(clock,500);
+    </script>
+</html>
